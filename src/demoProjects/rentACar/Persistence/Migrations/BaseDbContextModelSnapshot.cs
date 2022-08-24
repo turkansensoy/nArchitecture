@@ -37,7 +37,7 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brands", (string)null);
+                    b.ToTable("Brand", (string)null);
 
                     b.HasData(
                         new

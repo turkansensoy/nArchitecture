@@ -9,7 +9,7 @@ namespace Persistence.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Brands",
+                name: "Brand",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -18,16 +18,16 @@ namespace Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Brands", x => x.Id);
+                    table.PrimaryKey("PK_Brand", x => x.Id);
                 });
 
             migrationBuilder.InsertData(
-                table: "Brands",
+                table: "Brand",
                 columns: new[] { "Id", "Name" },
                 values: new object[] { 1, "BMW" });
 
             migrationBuilder.InsertData(
-                table: "Brands",
+                table: "Brand",
                 columns: new[] { "Id", "Name" },
                 values: new object[] { 2, "Mercedes" });
         }
@@ -35,7 +35,7 @@ namespace Persistence.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Brands");
+                name: "Brand");
         }
     }
 }
