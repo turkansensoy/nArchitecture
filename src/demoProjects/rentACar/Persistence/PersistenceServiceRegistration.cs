@@ -21,7 +21,7 @@ namespace Persistence
                                                      options.UseSqlServer(
                                                          configuration.GetConnectionString("RentACarCampProjectConnectionString")));
             services.AddScoped<IBrandRepository, BrandRepository>();
-
+            services.AddScoped<IModelRepository, ModelRepository>();
             return services;
         }
     }
